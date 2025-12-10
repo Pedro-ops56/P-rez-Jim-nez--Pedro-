@@ -84,5 +84,34 @@ suma_calificaciones = sum(diccionario_alumnos.values())
 promedio = suma_calificaciones / len(diccionario_alumnos)
 print(f"El promedio de las calificaciones es: {promedio}")
 print("---------------------")
+# Ejercicio 2: Crea un diccionario con 5 productos y precios, pide un producto y muestra su precio.
+diccionario_productos = {
+     "Cloro": 20,
+     "Detergente": 35,
+     "Jabón": 15,
+     "Papel sanitario": 40,
+     "Limpiador multiusos": 60
+ }
+producto_buscado = input("Introduce el nombre del producto: ")
+if producto_buscado in diccionario_productos:
+     print(f"El precio de: {producto_buscado} es: ${diccionario_productos[producto_buscado]}.")
+else:
+     print("El producto no se encuentra en el inventario.")
 
-# Ejercicio 2: Crea un diccionario con 5 productos y sus precios. Pide un producto y muestra su precio.
+# Ejercicio 3: Crea un diccionario con 5 países y sus capitales. Pide un país y muestra su capital.
+
+pais_buscado = input("Introduce el nombre del país o 'Salir' para terminar: ")
+diccionario_paises = {
+    "México": "Ciudad de México",
+    "Brasil": "Brasilia",
+    "Uruguay": "Montevideo",
+    "Argentina": "Buenos Aires",
+    "Estados Unidos": "Washington D.C."
+}
+while pais_buscado != "Salir":
+    if pais_buscado in diccionario_paises:
+        print(f"La capital del pais {pais_buscado} es: {diccionario_paises[pais_buscado]}.")
+    else:
+        capital_pais = input("El país no se encuentra en el diccionario. Introduce la capital de ese país para agregarlo: ")
+        diccionario_paises[pais_buscado] = capital_pais
+    pais_buscado = input("Introduce el nombre del país o 'Salir' para terminar: ")
